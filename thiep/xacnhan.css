@@ -218,6 +218,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'ClassiqueSaigon';
+  src: url('../thiep/fonts/ClassiqueSaigon.woff2') format('woff2'),
+      url('../thiep/fonts/ClassiqueSaigon.woff') format('woff'),
+      url('../thiep/fonts/ClassiqueSaigon.svg#ClassiqueSaigon') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 
 
 [data-aos] {
@@ -255,7 +267,7 @@
 .box-save {
   width: 100%;
   height: 600px;
-  background-image: url('./anh/pic1-02.png');
+  background-image: url('./anh/pic1-02.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -293,9 +305,9 @@
 }
 
 .top1{
-  font-family: 'SVN-Gotham';
+  font-family: 'ClassiqueSaigon';
   font-weight: 300;
-  font-size: 14px;
+  font-size: 20px;
   margin: 0 50px;
 }
 .top{
@@ -337,6 +349,7 @@
 
 .box-imgcnt2{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 30px;
@@ -347,6 +360,12 @@
 }
 .img-cnt2{
   width: 40%;
+}
+
+.lb-cnt2{
+  font-family: '1FTV VIP Amsterdam Signature';
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 
@@ -389,6 +408,36 @@
   font-size: 10px;
 }
 
+.box-map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-map{
+  width: 80%;
+}
+
+.map-btn{
+  width: 250px;
+  height: 30px;
+  background-color: #848484;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 50px 0;
+}
+
+.btn-map{
+  text-decoration: none;
+  font-family: 'SVN-Gotham';
+  color: #fff;
+  font-size: 12px;
+}
+
 .box-imgcenter{
   display: flex;
   flex-direction: column;
@@ -419,8 +468,16 @@
 }
 
 .img-timeline{
-  width: 90%;
+  width: 70%;
   margin: 20px 0 50px;
+}
+
+.p-timeline{
+  font-family: 'SVN-Gotham';
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 5px 0 100px;
 }
 
 .box-dress{
@@ -728,7 +785,7 @@ textarea{
 .lb-end2{
   font-family: 'Lora';
   font-weight: 300;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 
