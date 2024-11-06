@@ -86,7 +86,7 @@
                 <div class="slide">
                     <img src="./thiep/anh/MD1-0828.webp" alt="" />
                 </div>
-                <div class="slide">
+                <div class="slide">Ư
                     <img src="./thiep/anh/MD1-1897.webp" alt="" />
                 </div>
                 <div class="slide">
@@ -246,56 +246,53 @@
         AOS.init();
     </script>
     <script>
-        "use strict";
+       "use strict";
         // Select all slides
         const slides = document.querySelectorAll(".slide");
-        
-        // loop through slides and set each slides translateX
+
+        // Loop through slides và thiết lập translateX cho mỗi slide
         slides.forEach((slide, indx) => {
         slide.style.transform = `translateX(${indx * 100}%)`;
         });
-        
-        // select next slide button
+
+        // Chọn nút next và prev
         const nextSlide = document.querySelector(".btn-next");
-        
-        // current slide counter
+        const prevSlide = document.querySelector(".btn-prev");
+
+        // Biến đếm số slide hiện tại và tối đa
         let curSlide = 0;
-        // maximum number of slides
         let maxSlide = slides.length - 1;
-        
-        // add event listener and navigation functionality
+
+        // Thêm sự kiện cho nút tiếp theo
         nextSlide.addEventListener("click", function () {
-        // check if current slide is the last and reset current slide
+        // Nếu hiện tại là slide cuối, quay lại đầu tiên
         if (curSlide === maxSlide) {
             curSlide = 0;
         } else {
             curSlide++;
         }
-        
-        //   move slide by -100%
+
+        // Di chuyển tất cả các slide
         slides.forEach((slide, indx) => {
             slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
         });
         });
-        
-        // select next slide button
-        const prevSlide = document.querySelector(".btn-prev");
-        
-        // add event listener and navigation functionality
+
+        // Thêm sự kiện cho nút quay lại
         prevSlide.addEventListener("click", function () {
-        // check if current slide is the first and reset current slide to last
+        // Nếu hiện tại là slide đầu tiên, quay lại cuối cùng
         if (curSlide === 0) {
             curSlide = maxSlide;
         } else {
             curSlide--;
         }
-        
-        //   move slide by 100%
+
+        // Di chuyển tất cả các slide
         slides.forEach((slide, indx) => {
             slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
         });
         });
- 
+
      </script>
      <script src="./thiep/thiep.js"></script>
 </body>
